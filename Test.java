@@ -1,20 +1,25 @@
-interface Interface1
+interface RBI
 {
-	int a=10;
 	void display();
 }
-class InterfaceDemo1 implements Interface1
+class UnionBank implements RBI
 {
+	String statement;
+	String accountNo;
+
 	public void display()
 	{
-		System.out.println("I am from interface class");
+		System.out.println("Statement"+statement);
+		System.out.println("AccountNo"+accountNo);
 	}
 }
 class Test
 {
 	public static void main(String args[])
 	{
-		InterfaceDemo1 i=new InterfaceDemo1();
-		i.display();
+		UnionBank b=new UnionBank();
+		b.statement="Aprroved Succesfully";
+		b.accountNo="003310100151824";
+		b.display();
 	}
 }
