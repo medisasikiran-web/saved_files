@@ -1,0 +1,43 @@
+interface RBI
+{
+	void display();
+}
+class UnionBank implements RBI
+{
+	String statement;
+	String accountNo;
+
+	public void display()
+	{
+		System.out.println("Statement"+statement);
+		System.out.println("AccountNo"+accountNo);
+	}
+}
+class StateBank implements RBI
+{
+	double credit;
+	double debit;
+
+	public void display()
+	{
+		System.out.println("AmountCredited"+credit);
+		System.out.println("AmountDebited"+debit);
+	}
+}
+
+class Test
+{
+	public static void main(String args[])
+	{
+		UnionBank b=new UnionBank();
+		b.statement="Aprroved Succesfully";
+		b.accountNo="003310100151824";
+		b.display();
+		
+                 StateBank s = new StateBank();
+                s.credit = 5000.00;
+                 s.debit = 2000.00;
+                s.display();
+    
+	}
+}
